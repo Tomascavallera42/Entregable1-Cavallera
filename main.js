@@ -4,7 +4,7 @@ const precios = [5000, 4000, 3500, 11000];
 let serviciosSeleccionados = [];
 
 
-function mostrar() {
+function mostrarSer() {
     console.log("Servicios disponibles:");
     for (let i = 0; i < servicios.length; i++) {
         console.log(`${i + 1}. ${servicios[i]} - $${precios[i]}`);
@@ -12,7 +12,7 @@ function mostrar() {
 }
 
 
-function seleccionar() {
+function seleccionarSer() {
     let continuar = true;
 
     while (continuar) {
@@ -35,7 +35,7 @@ function seleccionar() {
     }
 }
 
-function totaal() {
+function totalSer() {
     let total = 0;
 
     for (let i = 0; i < serviciosSeleccionados.length; i++) {
@@ -50,10 +50,10 @@ function totaal() {
 
 function iniciar() {
     alert("Bienvenido a Omega Saneamientos");
-    mostrar();
-    seleccionar();
+    mostrarSer();
+    seleccionarSer();
 
-    let total = totaal();
+    let total = totalSer();
     alert("Servicios seleccionados:\n" + serviciosSeleccionados.join(", ") + `\n\nTotal a pagar: $${total}`);
     console.log("Detalle del servicio:", serviciosSeleccionados, "Total:", total);
 }
